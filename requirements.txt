@@ -10,6 +10,7 @@ beautifulsoup4
 whois
 gitpython
 jsonpickle
+redis
 sqlalchemy
 whoosh
 tvdb_api
