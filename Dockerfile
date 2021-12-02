@@ -57,7 +57,7 @@ COPY config.py /app/config.py
 COPY run.sh /app/venv/bin/run.sh
 
 RUN mkdir /srv/data /srv/plugins /srv/errbackends && chown -R $ERR_USER: /srv /app
-
+RUN cd /srv/errbackends && git clone https://github.com/errbotio/err-backend-slackv3 && pip install -r /srv/errbackends/err-backend-slackv3/requirements.txt
 
 EXPOSE 3141 3142
 VOLUME ["/srv"]
